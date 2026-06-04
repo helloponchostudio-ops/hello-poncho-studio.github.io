@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* This CSS centers the image perfectly on the screen */
+        /* Centers the image perfectly on the screen */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Light gray background */
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        img {
-            max-width: 100%;
+        
+        /* Ensures whatever image loads is responsive and fits nicely */
+        picture, img {
+            max-width: 90%;
             height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <img src="images/PonchoStudio_Landing_V2.jpg" alt="Coming Soon">
+    <picture>
+        <source media="(max-width: 768px)" srcset="/images/PonchoStudio_Landing_V2_mobile.jpg">
+        
+        <img src="/images/PonchoStudio_Landing_V2.jpg" alt="Welcome to Our Website">
+    </picture>
 
 </body>
 </html>
